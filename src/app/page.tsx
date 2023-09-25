@@ -1,7 +1,7 @@
 import { FileInput } from '@/components/FileInput'
 import { Input } from '@/components/Input'
 import { Select } from '@/components/Select'
-import { SelectItem } from '@/components/Select/SelectItem'
+import { SelectItem } from '@/components/Select/components/SelectItem'
 import { SettingsTabs } from '@/components/SettingsTabs'
 import { TextArea } from '@/components/TextArea'
 import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
