@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button'
 import { LogOut } from 'lucide-react'
+import { twMerge } from 'tailwind-merge'
 
 function Profile() {
   return (
@@ -10,10 +11,20 @@ function Profile() {
         alt="Foto do perfil do usuário"
       />
       <div className="flex flex-1 flex-col truncate ">
-        <span className="truncate text-sm font-semibold text-zinc-700">
+        <span
+          className={twMerge(
+            'truncate text-sm font-semibold text-zinc-700',
+            'dark:text-zinc-100',
+          )}
+        >
           Lucas Tumeleiro
         </span>
-        <span className="truncate text-xs text-zinc-700">
+        <span
+          className={twMerge(
+            'truncate text-xs text-zinc-700',
+            'dark:text-zinc-400',
+          )}
+        >
           lucasftumeleiro@gmail.com
         </span>
       </div>
