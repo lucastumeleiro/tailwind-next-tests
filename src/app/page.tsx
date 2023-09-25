@@ -3,7 +3,8 @@ import { Input } from '@/components/Input'
 import { Select } from '@/components/Select'
 import { SelectItem } from '@/components/Select/SelectItem'
 import { SettingsTabs } from '@/components/SettingsTabs'
-import { Mail } from 'lucide-react'
+import { TextArea } from '@/components/TextArea'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -142,7 +143,55 @@ export default function Home() {
               Write a short introduction.
             </span>
           </label>
-          <div />
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-3">
+              <Select placeholder="" defaultValue="normal">
+                <SelectItem value="normal" text="Normal text" />
+                <SelectItem value="md" text="Markdown" />
+              </Select>
+
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-100"
+                >
+                  <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-100"
+                >
+                  <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-100"
+                >
+                  <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-100"
+                >
+                  <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-100"
+                >
+                  <ListOrdered
+                    className="h-4 w-4 text-zinc-500"
+                    strokeWidth={3}
+                  />
+                </button>
+              </div>
+            </div>
+
+            <TextArea
+              id="id-bio"
+              defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </div>
         </div>
 
         <div className="grid-cols-form grid gap-3 pt-5">
