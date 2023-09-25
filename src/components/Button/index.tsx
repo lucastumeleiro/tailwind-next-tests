@@ -11,7 +11,7 @@ const buttonVariant = tv({
     variant: {
       primary: 'bg-violet-600 text-white hover:bg-violet-700',
       outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
-      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none',
+      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500',
     },
   },
   defaultVariants: {
@@ -22,7 +22,7 @@ const buttonVariant = tv({
 type TButtonProps = ComponentProps<'button'> &
   VariantProps<typeof buttonVariant>
 
-function Button({ variant, ...props }: TButtonProps) {
-  return <button className={buttonVariant({ variant })} {...props} />
+function Button({ variant, className, ...props }: TButtonProps) {
+  return <button className={buttonVariant({ variant, className })} {...props} />
 }
 export { Button }
