@@ -14,7 +14,7 @@ function SettingsTabs() {
 
   return (
     <Tabs.Root value={selectedTab} onValueChange={setSelectedTab}>
-      <ScrollArea.Root className="w-full" type="scroll">
+      <ScrollArea.Root className="w-full" type="auto">
         <ScrollArea.Viewport className="w-full overflow-x-scroll">
           <Tabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
             <TabItems
@@ -71,7 +71,7 @@ function SettingsTabs() {
         </ScrollArea.Viewport>
 
         <ScrollArea.Scrollbar
-          className="flex h-0.5 translate-y-1.5 touch-none select-none flex-col"
+          className="flex h-1.5 translate-y-2.5 touch-none select-none flex-col"
           orientation="horizontal"
         >
           <ScrollArea.Thumb className="relative flex-1 rounded-lg bg-zinc-300" />
