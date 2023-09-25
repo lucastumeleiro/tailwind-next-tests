@@ -2,9 +2,9 @@
 
 import { Trash2, UploadCloud } from 'lucide-react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { useFileInput } from './Root'
+import { useFileInput } from '../Root'
 import { formatBytes } from '@/Utils/functions'
-import { Button } from '../Button'
+import { Button } from '../../Button'
 
 function FileList() {
   const { files } = useFileInput()

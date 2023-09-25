@@ -1,7 +1,7 @@
 'use client'
 
 import { ChangeEvent, ComponentProps } from 'react'
-import { useFileInput } from './Root'
+import { useFileInput } from '../Root'
 
 type TFileInputControlProps = ComponentProps<'input'>
 
