@@ -74,7 +74,7 @@ export default function Home() {
           </label>
           <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
             <Input.Root>
-              <Input.Control id="id-firstName" defaultValue="Diego" />
+              <Input.Control id="id-firstName" defaultValue="Lucas" />
             </Input.Root>
 
             <div className="flex flex-col gap-3 lg:block">
@@ -88,7 +88,7 @@ export default function Home() {
                 Last name
               </label>
               <Input.Root id="id-lastName">
-                <Input.Control defaultValue="Fernandes" />
+                <Input.Control defaultValue="Tumeleiro" />
               </Input.Root>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
             <Input.Control
               id="id-email"
               type="email"
-              defaultValue="diego@rocketseat.com.br"
+              defaultValue="lucasftumeleiro@gmail.com"
             />
           </Input.Root>
         </div>
