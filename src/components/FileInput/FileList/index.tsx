@@ -16,7 +16,7 @@ function FileList() {
             key={`${file.name}_${file.size}`}
             name={file.name}
             size={file.size}
-            state="error"
+            state="progress"
           />
         )
       })}

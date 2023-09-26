@@ -10,8 +10,14 @@ const buttonVariant = tv({
   ],
   variants: {
     variant: {
-      primary: 'bg-violet-600 text-white hover:bg-violet-700',
-      outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
+      primary: twMerge(
+        'bg-violet-600 text-white hover:bg-violet-700',
+        'dark:bg-violet-500 dark:hover:bg-violet-600',
+      ),
+      outline: twMerge(
+        'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
+        'dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800',
+      ),
       ghost: twMerge(
         'rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500',
         'dark:hover:bg-zinc-800 dark:text-zinc-400',

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 import * as Tabs from '@radix-ui/react-tabs'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { TabItems } from './components/TabItems'
@@ -16,7 +17,12 @@ function SettingsTabs() {
     <Tabs.Root value={selectedTab} onValueChange={setSelectedTab}>
       <ScrollArea.Root className="w-full" type="auto">
         <ScrollArea.Viewport className="w-full overflow-x-scroll">
-          <Tabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
+          <Tabs.List
+            className={twMerge(
+              'mt-6 flex w-full items-center gap-4 border-b border-zinc-200',
+              'dark:border-zinc-700',
+            )}
+          >
             <TabItems
               value="settings-my-details"
               title="My details"

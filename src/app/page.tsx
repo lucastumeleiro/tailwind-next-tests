@@ -1,3 +1,5 @@
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
+import { twMerge } from 'tailwind-merge'
 import { Button } from '@/components/Button'
 import { FileInput } from '@/components/FileInput'
 import { Input } from '@/components/Input'
@@ -5,20 +7,40 @@ import { Select } from '@/components/Select'
 import { SelectItem } from '@/components/Select/components/SelectItem'
 import { SettingsTabs } from '@/components/SettingsTabs'
 import { TextArea } from '@/components/TextArea'
-import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
+      <h1
+        className={twMerge(
+          'text-3xl font-medium text-zinc-900',
+          'dark:text-zinc-100',
+        )}
+      >
+        Settings
+      </h1>
 
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
+        <div
+          className={twMerge(
+            'flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center',
+            'dark:border-zinc-700',
+          )}
+        >
           <div className="space-y-1">
-            <h2 className="text-lg font-medium text-zinc-900">Personal Info</h2>
-            <span className="text-sm text-zinc-500">
+            <h2
+              className={twMerge(
+                'text-lg font-medium text-zinc-900',
+                'dark:text-zinc-100',
+              )}
+            >
+              Personal Info
+            </h2>
+            <span
+              className={twMerge('text-sm text-zinc-500', 'dark:text-zinc-400')}
+            >
               Update you photo and personal details here.
             </span>
           </div>
@@ -35,12 +57,18 @@ export default function Home() {
 
       <form
         id="id-settings"
-        className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
+        className={twMerge(
+          'mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200',
+          'dark:divide-zinc-700',
+        )}
       >
-        <div className="lg:grid-cols-form flex flex-col gap-3 lg:grid">
+        <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-firstName"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Name
           </label>
@@ -52,7 +80,10 @@ export default function Home() {
             <div className="flex flex-col gap-3 lg:block">
               <label
                 htmlFor="id-lastName"
-                className="text-sm font-medium text-zinc-700 lg:sr-only"
+                className={twMerge(
+                  'text-sm font-medium text-zinc-700 lg:sr-only',
+                  'dark:text-zinc-300',
+                )}
               >
                 Last name
               </label>
@@ -63,10 +94,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-email"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Email address
           </label>
@@ -82,10 +116,13 @@ export default function Home() {
           </Input.Root>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-photo"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Your photo
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -100,10 +137,13 @@ export default function Home() {
           </FileInput.Root>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-role"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Role
           </label>
@@ -112,10 +152,13 @@ export default function Home() {
           </Input.Root>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-country"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Country
           </label>
@@ -125,10 +168,13 @@ export default function Home() {
           </Select>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-timezone"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Timezone
           </label>
@@ -138,8 +184,14 @@ export default function Home() {
           </Select>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
-          <label htmlFor="id-bio" className="text-sm font-medium text-zinc-700">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
+          <label
+            htmlFor="id-bio"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
+          >
             Bio
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
               Write a short introduction.
@@ -181,10 +233,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:grid-cols-form flex flex-col gap-3 pt-5 lg:grid">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
           <label
             htmlFor="id-projects"
-            className="text-sm font-medium text-zinc-700"
+            className={twMerge(
+              'text-sm font-medium text-zinc-700',
+              'dark:text-zinc-300',
+            )}
           >
             Portfolio projects
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
